@@ -79,4 +79,7 @@ It computes an saves the significance of the cluster partition, starting from PC
 
 _clusters_plots.py_
 It produces and saves plots of weather regimes' patterns.
+<<<<<<< HEAD
 
+=======
+>>>>>>> edbdef8878d574192987bf5f637a09f43ffe1f14
