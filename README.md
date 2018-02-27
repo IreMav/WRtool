@@ -1,5 +1,5 @@
-# WRtool
-WRtool – Weather Regimes tool
+# Weather Regimes tool (WRtool)
+February 2018 by Irene Mavilia (ISAC-CNR, i.mavilia@isac.cnr.it)
 
 ## Summary:
 A Python tool, composed of packages that are collections of modules, is designed to identify significant recurrent structures (clusters) in a dataset, which are also analysed performing diagnostics and computing metrics.
@@ -79,7 +79,3 @@ It computes an saves the significance of the cluster partition, starting from PC
 
 _clusters_plots.py_
 It produces and saves plots of weather regimes' patterns.
-<<<<<<< HEAD
-
-=======
->>>>>>> edbdef8878d574192987bf5f637a09f43ffe1f14
