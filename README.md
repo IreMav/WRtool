@@ -86,7 +86,4 @@ Dawson, Andrew, and T. N. Palmer. "Simulating weather regimes: Impact of model r
 Straus, David M., Susanna Corti, and Franco Molteni. "Circulation regimes: Chaotic variability versus SST-forced predictability." Journal of climate 20, no. 10 (2007): 2251-2272.
 
 ## Example:
-[[5c2f213d3362e0ec4cf12b038ddad98616329b82]]
-
-
-[[WRtool/clus_patterns_4clus_zg500_day_ERAInterim_obs_144x73_1ens_DJF_EAT_1979-2008_4pcs.png ]]
+![clus_patterns_4clus_zg500_day_erainterim_obs_144x73_1ens_djf_eat_1979-2008_4pcs](https://user-images.githubusercontent.com/29089954/36731838-3a6e00b2-1bcc-11e8-9d34-ae69e6396d44.png)
