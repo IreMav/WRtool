@@ -79,3 +79,14 @@ It computes an saves the significance of the cluster partition, starting from PC
 
 _clusters_plots.py_
 It produces and saves plots of weather regimes' patterns.
+
+## References:
+Dawson, Andrew, and T. N. Palmer. "Simulating weather regimes: Impact of model resolution and stochastic parameterization." Climate Dynamics 44, no. 7-8 (2015): 2177-2193.
+
+Straus, David M., Susanna Corti, and Franco Molteni. "Circulation regimes: Chaotic variability versus SST-forced predictability." Journal of climate 20, no. 10 (2007): 2251-2272.
+
+## Example:
+[[5c2f213d3362e0ec4cf12b038ddad98616329b82]]
+
+
+[[WRtool/clus_patterns_4clus_zg500_day_ERAInterim_obs_144x73_1ens_DJF_EAT_1979-2008_4pcs.png ]]
