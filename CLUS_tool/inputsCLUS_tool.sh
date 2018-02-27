@@ -8,34 +8,34 @@
 
 ##-------------------------------about paths------------------------------------------
 ## WRtool directory
-WRTOOL_PATH=/home/mavilia/WEATHER_REGIMEStool/IMPROVING_CLUStool/CLUS_tool/
+WRTOOL_PATH=/home/mavilia/WEATHER_REGIMEStool/WRtool_GitHub/CLUS_tool/
 
 ## Output data directory:
-OUTPUT_PATH=${WRTOOL_PATH}
+OUTPUT_PATH=/home/mavilia/WEATHER_REGIMEStool/WRtool_GitHub/
 
 ## Input data directory:
 ##____________SIM
 #INPUT_PATH=/home/mavilia/DATA/Stream1_Z500remap/
-INPUT_PATH=/home/mavilia/DATA/Z500T511regrid/Z500base/zg500mab/
+#INPUT_PATH=/home/mavilia/DATA/Z500T511regrid/Z500base/zg500mab/
 #INPUT_PATH=/home/mavilia/DATA/grib_ECMWF/
 
 ##____________OBS
 #INPUT_PATH=/home/mavilia/DATA/OBS/NCEP/zg500/
-#INPUT_PATH=/home/mavilia/DATA/OBS/ERA/zg500/
+INPUT_PATH=/home/mavilia/DATA/OBS/ERA/zg500/
 
 ## List of input files
-#filenames[0]='zg500_Aday_ERAInterim_2deg_1979-2008.nc'
+filenames[0]='zg500_Aday_ERAInterim_2deg_1979-2008.nc'
 #filenames[0]='zg500_Aday_NCEPNCAR_2deg_1979-2008.nc'
 #filenames[0]='ens_ec_s4_em00_P129_L500_1981_2011.nc'
 #filenames[0]='zg500_Aday_CNRM-CM6-1_TL127_regrid25_1979-2012.nc'
 #filenames[0]='zg500_Aday_CMCC-CM2-VHR4_1152x768_regrid25_1979-2014.nc'
 
-filenames[0]='zg500_Aday_EC-EARTH31_T511base_regrid25_0_1979-2008.nc'
-filenames[1]='zg500_Aday_EC-EARTH31_T511base_regrid25_1_1979-2008.nc'
-filenames[2]='zg500_Aday_EC-EARTH31_T511base_regrid25_2_1979-2008.nc'
-filenames[3]='zg500_Aday_EC-EARTH31_T511base_regrid25_3_1979-2008.nc'
-filenames[4]='zg500_Aday_EC-EARTH31_T511base_regrid25_4_1979-2008.nc'
-filenames[5]='zg500_Aday_EC-EARTH31_T511base_regrid25_5_1979-2008.nc'
+#filenames[0]='zg500_Aday_EC-EARTH31_T511base_regrid25_0_1979-2008.nc'
+#filenames[1]='zg500_Aday_EC-EARTH31_T511base_regrid25_1_1979-2008.nc'
+#filenames[2]='zg500_Aday_EC-EARTH31_T511base_regrid25_2_1979-2008.nc'
+#filenames[3]='zg500_Aday_EC-EARTH31_T511base_regrid25_3_1979-2008.nc'
+#filenames[4]='zg500_Aday_EC-EARTH31_T511base_regrid25_4_1979-2008.nc'
+#filenames[5]='zg500_Aday_EC-EARTH31_T511base_regrid25_5_1979-2008.nc'
 #filenames[6]='zg500_Aday_EC-EARTH31_T255stoc_regrid25_6_1979-2008.nc'
 #filenames[7]='zg500_Aday_EC-EARTH31_T255stoc_regrid25_7_1979-2008.nc'
 #filenames[8]='zg500_Aday_EC-EARTH31_T255stoc_regrid25_8_1979-2008.nc'
@@ -48,11 +48,11 @@ varname=zg           #variable name as in the input file (zg,...)
 level=500            #level to select (hPa)
 freq=day             #data frequency ('day','mon',year',...)
 filterwnd=5          #running mean filter time window
-model=ECEARTH31      #model name ECEARTH31 NCEPNCAR ERAInterim
-institute=CNR        #institute name
-kind=base            #base: baseline, stoc: stochastic physics, obs: observations
-res=T511             #T255 144x73 N216L85
-numens=6             #total number of ensemble members
+model=ERAInterim     #model name ECEARTH31 NCEPNCAR ERAInterim
+institute=rean       #institute name
+kind=obs             #base: baseline, stoc: stochastic physics, obs: observations
+res=144x73           #T255 144x73 N216L85
+numens=1             #total number of ensemble members
 enstoselect=no       #single ensemble member to analyse (starting from 0!)
 ## If you have only one realization set numens=1 and enstoselect=no
 ## If you have more than one ensemble member: if you set enstoselect=3, as an esample, only member 3 will be analysed;
