@@ -110,14 +110,14 @@ def anomalies(var_filt,var_season, dates_season,season):
     print(var_season.shape)
     for mon in range(len(m)):
         numdays=len(np.where([(dates_season[t].year==dates_season[0].year+1 and dates_season[t].month==m[mon]) for t in range(len(dates_season))])[0])
+        print('Number of days for month {0} is {1}'.format(m[mon],numdays))
         for day in range(numdays):
-            print('Number of days for month {0} is {1}'.format(m[mon],numdays))
-            print('day: {0}, month: {1}'.format(day+1,m[mon]))
+            #print('day: {0}, month: {1}'.format(day+1,m[mon]))
             mo=np.where([(dates_season[t].month==m[mon] and dates_season[t].day==day+1) for t in range(len(dates_season))])[0]
-            print('mo={0}, dates={1}'.format(mo,dates_season[mo]))
-            print('**********************************')
+            #print('mo={0}, dates={1}'.format(mo,dates_season[mo]))
+            #print('**********************************')
             var_anom[mo,:,:]=var_season[mo,:,:]-np.mean(var_filt[mo,:,:],axis=0)
-    
+
     print('\ndimensions of the {0} variable anomalies ---> {1}'.format(season,var_anom.shape))
        
     del var_filt
