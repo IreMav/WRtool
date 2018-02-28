@@ -65,7 +65,7 @@ def sel_season(var,dates,season, wnd=0):
     addtimes=int(wnd/2)
     #e.g. for DJF: adding 29nov and 30nov at the beginning and 1mar and 2 mar at the end
     for yr in range(syr,eyr):
-        print('\n::::::::::YEAR:::::::::::::',yr)
+        print('\n::::::::::YEAR::::::::::::: {0}/{1}'.format(yr,yr+1))
         bef=int(np.where([(dates[t].year==yr and dates[t].month==m[0]) and dates[t].day==1 for t in range(len(dates))])[0])
         if m[-1]==2:
             aft=int(np.where([(dates[t].year==yr+1 and dates[t].month==m[-1] and dates[t].day==28) for t in range(len(dates))])[0])
@@ -81,7 +81,7 @@ def sel_season(var,dates,season, wnd=0):
         var_filt_yr=np.empty([var_seasonadd_yr.shape[0]-wnd+1,var_seasonadd_yr.shape[1],var_seasonadd_yr.shape[2]])
         for c in range(var_seasonadd_yr.shape[0]-wnd+1):   #c=[0:89] for DJF
             var_filt_yr[c,:,:]=np.mean(var_seasonadd_yr[c:c+wnd,:,:],axis=0)
-        print('dimensions of the {0} year variable after a running mean of window={1} times ---> {2}'.format(yr+1,wnd,var_filt_yr.shape))
+        print('dimensions of the {0}/{1} year variable after a running mean of window={2} times ---> {3}'.format(yr,yr+1,wnd,var_filt_yr.shape))
         if yr==syr:
             var_filt=var_filt_yr
         else:
