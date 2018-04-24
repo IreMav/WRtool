@@ -39,6 +39,7 @@ If you have more than one ensemble member: if you set enstoselect=3, as an examp
 - area: 		  	regional average (EAT: Euro-Atlantic, PNA: Pacific North America, NH: Northern Hemisphere)
 - syr:			    starting year
 - eyr:			    end year
+
 ---------------------about cluster analysis------------------------------------------
 - numclus: 	    number of clusters
 Either set perc or numpcs (write '...=no' to the parameter you do not want to set):
@@ -79,6 +80,21 @@ It computes an saves the significance of the cluster partition, starting from PC
 
 _clusters_plots.py_
 It produces and saves plots of weather regimes' patterns.
+
+## How to run:
+Only the first time before using it on a different system you need:
+- To create the environment cdms2 from the environment.yml file:
+
+`conda env create -f environment.yml`
+
+`conda list`
+- To compile ctool.so and ctp.so modules in cluster_fortran folder:
+
+`f2py --fcompiler=gfortran --f90flags="-fopenmp" -lgomp -c -m ctp cluster_toolkit_parallel.f90 only: clus_sig_p`
+
+`f2py --fcompiler=gfortran -c -m ctool cluster_toolkit.f90 only: clus_opt adran1 gausts tsstat`
+- To run the tool you need to modify the inputCLUS_tool.sh with correct paths and parameters, and then launch CLUS_tool.sh
+First you need to run the tool for the reference data (like observations), in order to have the output needed to compare model data to observations. Then you can run the tool for your model data.
 
 ## References:
 Dawson, Andrew, and T. N. Palmer. "Simulating weather regimes: Impact of model resolution and stochastic parameterization." Climate Dynamics 44, no. 7-8 (2015): 2177-2193.
